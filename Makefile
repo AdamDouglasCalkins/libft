@@ -6,7 +6,7 @@
 #    By: acalkins <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/04/22 19:10:29 by acalkins          #+#    #+#              #
-#    Updated: 2018/04/24 16:22:09 by acalkins         ###   ########.fr        #
+#    Updated: 2020/03/10 15:05:21 by acalkins         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -63,7 +63,19 @@ SRC		= ft_atoi.c \
 		  ft_strsub.c \
 		  ft_strtrim.c \
 		  ft_tolower.c \
-		  ft_toupper.c
+		  ft_toupper.c \
+		  ft_putarr.c \
+		  ft_create_elem.c \
+		  deleteList.c \
+		  ft_list_size.c \
+		  ft_list_push_front.c \
+		  ft_list_push_back.c \
+		  ft_list_push_params.c \
+		  ft_list_last.c \
+		  ft_list_clear.c \
+		  ft_list_at.c \
+		  ft_list_reverse.c \
+		  ft_list_foreach.c
 
 OBJ		= $(SRC:.c=.o)
 

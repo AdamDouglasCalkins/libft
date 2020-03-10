@@ -6,20 +6,22 @@
 /*   By: acalkins <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/22 19:20:24 by acalkins          #+#    #+#             */
-/*   Updated: 2018/04/24 20:29:48 by acalkins         ###   ########.fr       */
+/*   Updated: 2020/03/10 15:07:06 by acalkins         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 # include <string.h>
+# include <stdlib.h>
+# include <unistd.h>
 
-typedef struct		s_list
+typedef	struct				s_list
 {
-	void			*content;
-	size_t			content_size;
-	struct s_list	*next;
-}					t_list;
+	int						empty;
+	void					*data;
+	struct s_list			*next;
+}							t_list;
 
 int					ft_atoi(char *str);
 void				ft_bzero(void *s, size_t n);
@@ -73,5 +75,17 @@ int					ft_tolower(int c);
 int					ft_toupper(int c);
 char				*ft_itoa(int n);
 void				*ft_memalloc(size_t size);
+void				ft_putarr(char **arr);
+t_list				*ft_create_elem(void *data, int i);
+void				deleteList(t_list *head);
+int					ft_list_size(t_list *begin_list);
+void				ft_list_push_front(t_list **begin_list, void *data, int i);
+void				ft_list_push_back(t_list **begin_list, void *data, int i);
+t_list				*ft_list_push_params(int ac, char **av);
+t_list				*ft_list_last(t_list *begin_list);
+void				ft_list_clear(t_list **begin_list);
+t_list				*ft_list_at(t_list *begin_list, unsigned int nbr);
+void				ft_list_reverse(t_list **begin_list);
+void				ft_list_foreach(t_list *begin_list, void (*f)(void *));
 
 #endif
